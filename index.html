@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClearRoute — Fix Bay Area Traffic Through Human Coordination</title>
+  <meta name="description" content="ClearRoute is a community-driven initiative to reduce Bay Area traffic congestion through smart human coordination. No new roads. Just 15% fewer cars at peak hour.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#">Clear<span>Route</span></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#problem">The Problem</a></li>
+          <li class="nav-item"><a class="nav-link" href="#truth">The Science</a></li>
+          <li class="nav-item"><a class="nav-link" href="#strategies">8 Strategies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pilot">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#data">The Data</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item ms-lg-2"><a class="nav-link nav-cta" href="#involved">Get Involved</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7" data-aos="fade-right">
+          <h1>Let's Fix <span class="text-accent">Bay Area Traffic</span> Together</h1>
+          <p class="lead">No new roads. No billion-dollar projects. Just smart human coordination. When we spread out our commutes by just 15 minutes, everyone gets home faster.</p>
+          <div class="d-flex gap-3 mt-4 flex-wrap">
+            <a href="#strategies" class="btn-primary-custom">Learn How It Works</a>
+            <a href="#involved" class="btn-outline-custom">Join the Movement</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="number">90 &rarr; 25</span>
+              <span class="label">Minutes saved on commute</span>
+            </div>
+            <div class="hero-stat">
+              <span class="number">15%</span>
+              <span class="label">Reduction is all it takes</span>
+            </div>
+            <div class="hero-stat">
+              <span class="number">$0</span>
+              <span class="label">New infrastructure needed</span>
+            </div>
+          </div>
+          <div class="hero-corridor">
+            <i class="fa-solid fa-location-dot"></i> Starting with I-580 Altamont Pass &amp; I-680 San Ramon Valley
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left">
+          <div class="problem-visual" style="margin-top: 0;">
+            <h5 class="text-center mb-3" style="font-size: 0.9rem; color: var(--gray-500);">Peak Hour Bottleneck</h5>
+            <div class="capacity-bar-wrapper">
+              <div class="capacity-label">
+                <span>Road Capacity</span>
+                <span style="color: var(--primary);">7,500 vehicles/hr</span>
+              </div>
+              <div class="capacity-bar">
+                <div class="capacity-fill capacity">Capacity</div>
+              </div>
+            </div>
+            <div class="capacity-bar-wrapper mt-3">
+              <div class="capacity-label">
+                <span>Peak Demand</span>
+                <span style="color: #ef4444;">9,000 vehicles/hr</span>
+              </div>
+              <div class="capacity-bar">
+                <div class="capacity-fill demand">+20% Over!</div>
+              </div>
+            </div>
+            <p class="text-center mt-3" style="font-size: 0.82rem; color: var(--gray-500);">When demand exceeds capacity, traffic flow collapses &mdash; not gradually, but suddenly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE PROBLEM ===== -->
+  <section id="problem">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="section-label">The Problem</span>
+        <h2 class="section-title">Traffic Congestion Is a <span class="text-accent">Timing Failure</span></h2>
+        <p class="section-subtitle">It's not too many cars in the Bay Area. It's too many cars on the same road at the same time. When everyone leaves between 7:00 and 8:30am, roads designed for a certain capacity get overwhelmed.</p>
+      </div>
+
+      <!-- Corridor Flow -->
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h5 class="text-center mb-3" style="font-weight: 700;">The Corridor Chain</h5>
+        <div class="corridor-flow">
+          <div class="corridor-node"><i class="fa-solid fa-car me-1"></i> I-580<br><small>Tracy / Livermore</small></div>
+          <div class="corridor-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="corridor-node"><i class="fa-solid fa-car me-1"></i> I-680<br><small>Danville / San Ramon</small></div>
+          <div class="corridor-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="corridor-node merge"><i class="fa-solid fa-code-merge me-1"></i> Dublin<br><small>Interchange</small></div>
+          <div class="corridor-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="corridor-node merge"><i class="fa-solid fa-mountain me-1"></i> Sunol<br><small>Grade</small></div>
+          <div class="corridor-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="corridor-node merge"><i class="fa-solid fa-code-merge me-1"></i> Warm Springs<br><small>I-880 Merge</small></div>
+          <div class="corridor-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="corridor-node destination"><i class="fa-solid fa-building me-1"></i> San Jose<br><small>Silicon Valley</small></div>
+        </div>
+      </div>
+
+      <!-- Commute Comparison -->
+      <div class="row mt-5 g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-custom text-center">
+            <div class="card-icon blue mx-auto"><i class="fa-solid fa-clock"></i></div>
+            <h4>Without Traffic</h4>
+            <p style="font-size: 2rem; font-weight: 800; color: var(--accent);">25 min</p>
+            <p>Tracy to Dublin on I-580</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-custom text-center">
+            <div class="card-icon orange mx-auto"><i class="fa-solid fa-hourglass-half"></i></div>
+            <h4>During Peak Hours</h4>
+            <p style="font-size: 2rem; font-weight: 800; color: #ef4444;">90 min</p>
+            <p>Same road, same distance</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-custom text-center">
+            <div class="card-icon green mx-auto"><i class="fa-solid fa-chart-line"></i></div>
+            <h4>Demand vs Capacity</h4>
+            <p style="font-size: 2rem; font-weight: 800; color: var(--primary);">120%</p>
+            <p>9,000 cars vs 7,500 capacity</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why it happens -->
+      <div class="quote-block mt-5" data-aos="fade-up">
+        <i class="fa-solid fa-lightbulb me-2 text-accent"></i>
+        When demand exceeds ~90% of road capacity, flow doesn't slow down proportionally &mdash; it <strong>collapses</strong>. Cars at 60mph suddenly drop to 15mph. Each brake tap creates a shockwave that travels backward. That's why you sit in traffic that clears for no visible reason.
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE COUNTERINTUITIVE TRUTH ===== -->
+  <section id="truth" class="bg-light-custom">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="section-label">The Science</span>
+        <h2 class="section-title">Free-Flowing Roads Carry <span class="text-accent">3x More Cars</span></h2>
+        <p class="section-subtitle">This is the most important insight: congestion doesn't just waste your time &mdash; it actively reduces the road's own capacity by 3x.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-5">
+          <div class="compare-card congested">
+            <i class="fa-solid fa-traffic-light fa-2x" style="color: #ef4444;"></i>
+            <div class="big-number">~600</div>
+            <div class="unit">vehicles / lane / hour</div>
+            <h4 class="mt-3">Congested Flow</h4>
+            <p style="color: var(--gray-500); font-size: 0.95rem;">Cars packed bumper-to-bumper but barely moving. 20,000 cars squeeze through in 3 hours.</p>
+          </div>
+        </div>
+        <div class="col-md-2 d-flex align-items-center justify-content-center">
+          <div class="text-center">
+            <div style="font-size: 2rem; font-weight: 800; color: var(--primary);">vs</div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="compare-card freeflow">
+            <i class="fa-solid fa-road fa-2x" style="color: var(--accent);"></i>
+            <div class="big-number">~2,000</div>
+            <div class="unit">vehicles / lane / hour</div>
+            <h4 class="mt-3">Free Flow</h4>
+            <p style="color: var(--gray-500); font-size: 0.95rem;">Cars spaced apart but moving fast. 24,000 cars flow through in the same 3 hours.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-block mt-5" data-aos="fade-up">
+        "We don't need fewer people to travel. We just need fewer people traveling at the <strong>exact same moment</strong>."
+      </div>
+
+      <!-- Tipping Point -->
+      <div class="tipping-highlight" data-aos="fade-up" data-aos-delay="200">
+        <div class="big">15%</div>
+        <h3 style="margin-top: 12px;">The Tipping Point</h3>
+        <p>Removing just 15% of cars from the peak hour window (~1,350 out of 9,000) restores free flow for <strong>everyone</strong>. The remaining 7,650 vehicles flow freely at 60mph.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8 STRATEGIES ===== -->
+  <section id="strategies">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="section-label">Our Approach</span>
+        <h2 class="section-title">8 Strategies, <span class="text-accent">One Coordinated Plan</span></h2>
+        <p class="section-subtitle">No single strategy solves the problem alone. All 8 work together to cross the 15% reduction threshold.</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="strategy-tabs" data-aos="fade-up" data-aos-delay="100">
+        <button class="strategy-tab active" data-target="time-shifting"><i class="fa-solid fa-clock me-1"></i> Time Shifting</button>
+        <button class="strategy-tab" data-target="car-reduction"><i class="fa-solid fa-car me-1"></i> Car Reduction</button>
+        <button class="strategy-tab" data-target="shared-transport"><i class="fa-solid fa-van-shuttle me-1"></i> Shared Transport</button>
+        <button class="strategy-tab" data-target="behavioral"><i class="fa-solid fa-brain me-1"></i> Behavioral</button>
+      </div>
+
+      <!-- Time Shifting -->
+      <div class="row g-4 strategy-group active" id="time-shifting">
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="card-custom">
+            <div class="card-icon blue"><i class="fa-solid fa-clock-rotate-left"></i></div>
+            <h4>Strategy 1 &mdash; Staggered Departure Times</h4>
+            <p>Group commuters into 12 departure waves across 3 hours (6:00&ndash;9:00am). Instead of 9,000 cars at 7:30am, spread them across 15-minute windows.</p>
+            <div class="card-evidence"><i class="fa-solid fa-check-circle me-1"></i> Manhattan staggered hours: reduced subway congestion. 3M: 29% peak traffic reduction. Beijing: 15.24% reduction.</div>
+            <div class="card-impact"><i class="fa-solid fa-arrow-down me-1"></i> ~5% reduction</div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-custom">
+            <div class="card-icon blue"><i class="fa-solid fa-building"></i></div>
+            <h4>Strategy 4 &mdash; Corporate Schedule Staggering</h4>
+            <p>Work with employers to shift office hours. Company A: 7am&ndash;4pm. Company B: 8am&ndash;5pm. Company C: 9am&ndash;6pm. Employees naturally hit the road at different times.</p>
+            <div class="card-evidence"><i class="fa-solid fa-check-circle me-1"></i> Manhattan program (1970): measurable results by 1972. Honolulu 1988 pilot showed clear benefits.</div>
+            <div class="card-impact"><i class="fa-solid fa-arrow-down me-1"></i> ~5% reduction (combined)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Car Reduction -->
+      <div class="row g-4 strategy-group" id="car-reduction">
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="card-custom">
+            <div class="card-icon green"><i class="fa-solid fa-house-laptop"></i></div>
+            <h4>Strategy 2 &mdash; Rotating Work-From-Home Days</h4>
+            <p>Volunteers who can work remotely commit to one fixed WFH day per week. Coordination ensures each day has roughly equal opt-outs. Every weekday, thousands of cars aren't on the road.</p>
+            <div class="card-evidence"><i class="fa-solid fa-check-circle me-1"></i> COVID proved WFH reduces traffic 30&ndash;40%. Stanford pilot: solo driving dropped from 72% to 46%.</div>
+            <div class="card-impact"><i class="fa-solid fa-arrow-down me-1"></i> ~5% reduction</div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-custom">
+            <div class="card-icon green"><i class="fa-solid fa-people-group"></i></div>
+            <h4>Strategy 3 &mdash; Neighborhood Carpool Teams</h4>
+            <p>Neighbors form teams of 4 and rotate who drives. Monday person A, Tuesday person B. Four cars become one car each day.</p>
+            <div class="card-evidence"><i class="fa-solid fa-check-circle me-1"></i> Scoop (Bay Area): 30,000+ commuters, 30&ndash;40% parking reduction. 51% of people say they'd carpool with the right coordination.</div>
+            <div class="card-impact"><i class="fa-solid fa-arrow-down me-1"></i> ~3% reduction</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shared Transport -->
+      <div class="row g-4 strategy-group" id="shared-transport">
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="card-custom">
+            <div class="card-icon purple"><i class="fa-solid fa-van-shuttle"></i></div>
+            <h4>Strategy 5 &mdash; Shared Commuter Vans</h4>
+            <p>Small commercial vans carrying 6&ndash;8 people along high-demand stretches. One van replaces 6&ndash;8 individual cars. Riders save on gas and parking.</p>
+            <div class="card-impact"><i class="fa-solid fa-arrow-down me-1"></i> ~1&ndash;2% reduction</div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-custom">
+            <div class="card-icon purple"><i class="fa-solid fa-bus"></i></div>
+            <h4>Strategy 6 &mdash; Employer Shuttle Loops</h4>
+            <p>Multiple companies share shuttle bus routes. One shuttle replaces 30&ndash;40 cars. Smaller companies that can't afford solo shuttles share the cost. The Google/Apple model for everyone.</p>
+            <div class="card-impact"><i class="fa-solid fa-arrow-down me-1"></i> ~1&ndash;2% reduction</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Behavioral -->
+      <div class="row g-4 strategy-group" id="behavioral">
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="card-custom">
+            <div class="card-icon orange"><i class="fa-solid fa-chart-simple"></i></div>
+            <h4>Strategy 7 &mdash; Social Nudges &amp; Live Feedback</h4>
+            <p>"Your corridor right now: 2,400 cars. If 400 people shift 15 minutes, everyone saves 45 minutes." Friendly neighborhood competition. Personal stats: "You saved 55 minutes today."</p>
+            <div class="card-evidence"><i class="fa-solid fa-check-circle me-1"></i> Singapore INSINC app: achieved 7.49% peak-to-off-peak shift using points and lottery rewards.</div>
+            <div class="card-impact"><i class="fa-solid fa-arrow-down me-1"></i> Sustains all strategies</div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-custom">
+            <div class="card-icon orange"><i class="fa-solid fa-signs-post"></i></div>
+            <h4>Strategy 8 &mdash; Divert Pass-Through Traffic</h4>
+            <p>Not all cars are local commuters. Advance signage and digital alerts inform non-local drivers: "Congestion 6&ndash;9am on I-580 &mdash; consider alternate route or travel after 9:30."</p>
+            <div class="card-evidence"><i class="fa-solid fa-check-circle me-1"></i> Caltrans dynamic signs: 10&ndash;20% driver diversion when delay information is shown.</div>
+            <div class="card-impact"><i class="fa-solid fa-arrow-down me-1"></i> ~2&ndash;3% reduction</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Combined Impact -->
+      <div class="tipping-highlight mt-5" data-aos="fade-up">
+        <h4 style="color: var(--dark); margin-bottom: 8px;">Combined Impact</h4>
+        <p style="max-width: 600px;">Staggered times + corporate schedules <strong>(~5%)</strong> + WFH rotation <strong>(~5%)</strong> + carpools + vans + shuttles <strong>(~5%)</strong> + pass-through diversion <strong>(~2&ndash;3%)</strong> = <strong style="color: var(--accent); font-size: 1.3rem;">15&ndash;18% total reduction</strong>, crossing the tipping point to restore free flow.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DATA STRIP ===== -->
+  <div class="data-strip" id="data">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-md-3" data-aos="fade-up">
+          <div class="data-card">
+            <div class="number">160K</div>
+            <div class="label">Vehicles/day crossing Altamont Pass</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="data-card">
+            <div class="number">64,930</div>
+            <div class="label">Central Valley commuters daily</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="data-card">
+            <div class="number">LOS F</div>
+            <div class="label">Level of Service (breakdown)</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="data-card">
+            <div class="number">2x</div>
+            <div class="label">Commuters doubled since 1990</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PILOT PLAN ===== -->
+  <section id="pilot">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="section-label">How It Works</span>
+        <h2 class="section-title">The <span class="text-accent">Pilot Plan</span></h2>
+        <p class="section-subtitle">One corridor. One day. All 8 strategies activated simultaneously. Measured with hard data.</p>
+      </div>
+
+      <!-- Steps -->
+      <div class="row align-items-start justify-content-center mt-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-2 col-4">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h5>Pick Corridor</h5>
+            <p>I-580 + I-680 to San Jose</p>
+          </div>
+        </div>
+        <div class="col-auto d-none d-md-flex step-connector"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="col-md-2 col-4">
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h5>Recruit</h5>
+            <p>500&ndash;600 commuters via community outreach</p>
+          </div>
+        </div>
+        <div class="col-auto d-none d-md-flex step-connector"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="col-md-2 col-4">
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h5>Baseline</h5>
+            <p>Count cars at intersections before pilot</p>
+          </div>
+        </div>
+        <div class="col-auto d-none d-md-flex step-connector"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="col-md-2 col-4">
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h5>Activate</h5>
+            <p>All 8 strategies on pilot day</p>
+          </div>
+        </div>
+        <div class="col-auto d-none d-md-flex step-connector"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="col-md-2 col-4">
+          <div class="step-card">
+            <div class="step-number">5</div>
+            <h5>Measure</h5>
+            <p>Count again, compare results</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phased Roadmap -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+          <h4 class="text-center mb-4" style="font-weight: 700;">Phased Roadmap</h4>
+          <div class="phase-card">
+            <span class="phase-badge p1">Phase 1</span>
+            <h5 style="margin-bottom: 4px;">I-580 + I-680 Feeder Corridors</h5>
+            <p style="color: var(--gray-500); margin: 0; font-size: 0.9rem;">Both feeder corridors coordinated simultaneously through the Dublin interchange.</p>
+          </div>
+          <div class="phase-card phase-2">
+            <span class="phase-badge p2">Phase 2</span>
+            <h5 style="margin-bottom: 4px;">Add I-880 Commuters</h5>
+            <p style="color: var(--gray-500); margin: 0; font-size: 0.9rem;">Reduce congestion at the Warm Springs merge point by including Fremont, Newark, and Union City.</p>
+          </div>
+          <div class="phase-card phase-3">
+            <span class="phase-badge p3">Phase 3</span>
+            <h5 style="margin-bottom: 4px;">Full Network Coordination</h5>
+            <p style="color: var(--gray-500); margin: 0; font-size: 0.9rem;">Monday&ndash;Friday ongoing plan across I-580, I-680, and I-880 corridors.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACE Train -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-10" data-aos="fade-up">
+          <div class="ace-card">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="card-icon blue" style="margin-bottom: 0;"><i class="fa-solid fa-train"></i></div>
+              <div>
+                <h4 style="margin-bottom: 2px;">ACE Train &mdash; A Complementary Option</h4>
+                <p style="margin: 0; color: var(--gray-500); font-size: 0.9rem;">The Altamont Corridor Express runs along the I-580 corridor from Tracy/Stockton to San Jose.</p>
+              </div>
+            </div>
+            <div class="ace-stats">
+              <div class="ace-stat">
+                <div class="val">4</div>
+                <div class="desc">Morning trains</div>
+              </div>
+              <div class="ace-stat">
+                <div class="val">~2,900</div>
+                <div class="desc">Daily riders</div>
+              </div>
+              <div class="ace-stat">
+                <div class="val">1.5&ndash;2 hrs</div>
+                <div class="desc">Travel time</div>
+              </div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--gray-500); margin-top: 16px; margin-bottom: 0;">Each commuter on ACE is one fewer car on I-580. For those who value productive time over driving, it's a solid alternative.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CASCADING BOTTLENECK ===== -->
+  <section class="bg-light-custom" id="bottleneck">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="section-label">Transparency</span>
+        <h2 class="section-title">The <span class="text-accent">Cascading Bottleneck</span> Problem</h2>
+        <p class="section-subtitle">One jam at Warm Springs can cascade all the way back to Tracy and San Ramon. That's why we coordinate both feeder corridors simultaneously.</p>
+      </div>
+
+      <div class="cascade-chain" data-aos="fade-up" data-aos-delay="100">
+        <div class="cascade-node"><i class="fa-solid fa-car me-1"></i> I-880 Congestion</div>
+        <div class="cascade-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="cascade-node">Warm Springs Backup</div>
+        <div class="cascade-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="cascade-node">I-680 Backs Up</div>
+        <div class="cascade-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="cascade-node">Sunol Grade Chokes</div>
+        <div class="cascade-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="cascade-node">Dublin Interchange Jams</div>
+        <div class="cascade-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="cascade-node">Both I-580 &amp; I-680 Blocked</div>
+      </div>
+
+      <div class="quote-block" data-aos="fade-up" data-aos-delay="200">
+        <i class="fa-solid fa-triangle-exclamation me-2" style="color: #d97706;"></i>
+        Fixing one segment can shift the bottleneck downstream. That's why ClearRoute takes a <strong>phased, whole-corridor approach</strong> &mdash; eventually including I-880 to address the full chain.
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DATA / TRUST ===== -->
+  <section id="trust">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="section-label">Built on Real Data</span>
+        <h2 class="section-title">Proven Research, <span class="text-accent">Real Numbers</span></h2>
+        <p class="section-subtitle">Every claim is backed by Caltrans data, academic studies, and real-world pilot programs.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="card-custom">
+            <div class="card-icon green"><i class="fa-solid fa-flask"></i></div>
+            <h4>Proven Programs</h4>
+            <p>Manhattan staggered hours, Singapore INSINC, Scoop Bay Area, Stanford parking pilot, Seattle Commute Trip Reduction &mdash; each proved individual strategies work.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-custom">
+            <div class="card-icon blue"><i class="fa-solid fa-database"></i></div>
+            <h4>Government Data</h4>
+            <p>All traffic numbers sourced from Caltrans, MTC, Alameda CTC, SJCOG, and FHWA. Verified AADT counts, LOS ratings, and capacity figures.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-custom">
+            <div class="card-icon purple"><i class="fa-solid fa-puzzle-piece"></i></div>
+            <h4>What's New</h4>
+            <p>Nobody has combined all 8 strategies into a single coordinated platform targeting specific corridors with measured results. That's ClearRoute's unique contribution.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sources -->
+      <div class="mt-5" data-aos="fade-up">
+        <h5 class="mb-3" style="font-weight: 700; font-size: 0.95rem; color: var(--gray-500);">Data Sources</h5>
+        <ul class="source-list">
+          <li>Caltrans Traffic Census</li>
+          <li>Caltrans PeMS</li>
+          <li>Alameda CTC</li>
+          <li>San Joaquin COG</li>
+          <li>MTC Bay Area</li>
+          <li>FHWA Freight Mobility</li>
+          <li>ACE Corridor Vision</li>
+          <li>I-580 Express Lanes Study</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PHILOSOPHY ===== -->
+  <div class="data-strip">
+    <div class="container text-center" data-aos="fade-up">
+      <h3 style="color: #fff; font-weight: 800; margin-bottom: 16px;">Education &amp; Social Responsibility, Not Enforcement</h3>
+      <p style="color: rgba(255,255,255,0.75); max-width: 700px; margin: 0 auto; font-size: 1.05rem;">
+        ClearRoute doesn't control anyone. Once people understand the math and see the community benefit, they take responsibility &mdash; like recycling. No penalties, no tracking, no mandates. Just neighbors helping neighbors through smart coordination.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT / FOUNDER ===== -->
+  <section id="about" class="founder-section">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="section-label">About</span>
+        <h2 class="section-title">Meet the <span class="text-accent">Founder</span></h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="founder-card">
+            <div class="d-flex flex-column flex-md-row align-items-center align-items-md-start gap-4">
+              <div class="founder-avatar flex-shrink-0">MV</div>
+              <div>
+                <div class="founder-name">Mani (ManiV) Vadivel</div>
+                <div class="founder-title">Founder &amp; CEO of NULogic &bull; Startup Advisor &bull; Innovator</div>
+                <div class="founder-bio">
+                  <p>Mani brings over 25 years of experience spearheading operations and strategic growth across the US, Mexico, Chile, Canada, Portugal, and India. As Founder and CEO of NULogic, a leading global IT services provider, he has a proven track record of transforming ambitious objectives into tangible outcomes.</p>
+                  <p>His journey from a small village in India to becoming a successful entrepreneur in the United States is a testament to resilience, hard work, and relentless pursuit of opportunity. Mani is also the Founder of DreamsLand, dedicated to transforming digital ideas into reality.</p>
+                  <p>ClearRoute is born from Mani's passion for public service and community impact &mdash; applying technology expertise and entrepreneurial mindset to solve a real-world problem affecting millions of Bay Area commuters daily.</p>
+                </div>
+                <a href="https://www.linkedin.com/in/manivadivel/" target="_blank" rel="noopener" class="founder-linkedin">
+                  <i class="fa-brands fa-linkedin"></i> Connect on LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GET INVOLVED ===== -->
+  <section class="cta-section" id="involved">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <h2>Join the <strong>ClearRoute</strong> Movement</h2>
+        <p class="mb-5" style="max-width: 560px; margin-left: auto; margin-right: auto;">We're building the ClearRoute mobile app. Be the first to know when the pilot launches. Leave your info below.</p>
+
+        <div class="cta-form" data-aos="fade-up" data-aos-delay="100">
+          <form id="signupForm">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Email Address" required>
+            </div>
+            <div class="mb-4">
+              <select class="form-select" required>
+                <option value="" disabled selected>Which corridor do you commute on?</option>
+                <option>I-580 (Tracy / Livermore / Dublin)</option>
+                <option>I-680 (Danville / San Ramon / Pleasanton)</option>
+                <option>I-880 (Fremont / Newark / Union City)</option>
+                <option>Other Bay Area corridor</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-cta-submit">
+              <i class="fa-solid fa-paper-plane me-2"></i> Notify Me When It Launches
+            </button>
+          </form>
+        </div>
+
+        <div class="row g-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-md-4">
+            <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 24px;">
+              <i class="fa-solid fa-building fa-2x mb-3" style="color: rgba(255,255,255,0.8);"></i>
+              <h5 style="color: #fff; font-weight: 700;">Employers</h5>
+              <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin: 0;">Are you an employer along this corridor? We'd love to discuss corporate schedule coordination.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 24px;">
+              <i class="fa-solid fa-hands-helping fa-2x mb-3" style="color: rgba(255,255,255,0.8);"></i>
+              <h5 style="color: #fff; font-weight: 700;">Volunteers</h5>
+              <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin: 0;">Want to volunteer or intern? We need help promoting this initiative in your community.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">Clear<span>Route</span></div>
+          <p class="footer-tagline">A community initiative to solve Bay Area traffic through human coordination, not more concrete.</p>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5>Navigate</h5>
+          <ul class="list-unstyled" style="font-size: 0.9rem;">
+            <li class="mb-2"><a href="#problem">The Problem</a></li>
+            <li class="mb-2"><a href="#truth">The Science</a></li>
+            <li class="mb-2"><a href="#strategies">8 Strategies</a></li>
+            <li class="mb-2"><a href="#pilot">How It Works</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5>More</h5>
+          <ul class="list-unstyled" style="font-size: 0.9rem;">
+            <li class="mb-2"><a href="#data">The Data</a></li>
+            <li class="mb-2"><a href="#about">About</a></li>
+            <li class="mb-2"><a href="#involved">Get Involved</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <h5>Connect</h5>
+          <ul class="list-unstyled" style="font-size: 0.9rem;">
+            <li class="mb-2"><a href="https://www.linkedin.com/in/manivadivel/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin me-2"></i>LinkedIn</a></li>
+          </ul>
+          <p style="font-size: 0.82rem; color: var(--gray-500); margin-top: 16px;">We respect your privacy. Your information is used only for ClearRoute coordination.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ClearRoute. A community initiative by Mani Vadivel.</p>
+        <p>Fix Bay Area Traffic Through Human Coordination</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    // Init AOS
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 60
+    });
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Strategy tabs
+    document.querySelectorAll('.strategy-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.strategy-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.strategy-group').forEach(g => g.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.target).classList.add('active');
+      });
+    });
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const navCollapse = document.getElementById('navMenu');
+        if (navCollapse.classList.contains('show')) {
+          bootstrap.Collapse.getInstance(navCollapse).hide();
+        }
+      });
+    });
+
+    // Form submit (placeholder)
+    document.getElementById('signupForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      btn.innerHTML = '<i class="fa-solid fa-check me-2"></i> Thank you! We\'ll be in touch.';
+      btn.disabled = true;
+      btn.style.opacity = '0.8';
+    });
+  </script>
+
+</body>
+</html>
